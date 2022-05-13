@@ -14,8 +14,7 @@ public class _016_2018_수들의합5 {
 		
 		
 		
-		
-		
+		//aaddadadaadstestsdadsasdadad
 		
 		
 		
