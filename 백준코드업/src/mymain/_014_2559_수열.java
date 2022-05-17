@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class _014_2559_수열 {
+    
+     static int N;
+     static int K;
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
@@ -18,8 +21,8 @@ public class _014_2559_수열 {
 
 		st = new StringTokenizer(br.readLine());
 
-		int N = Integer.parseInt(st.nextToken());
-		int K = Integer.parseInt(st.nextToken());
+		N = Integer.parseInt(st.nextToken());
+		K = Integer.parseInt(st.nextToken());
 
 		st = new StringTokenizer(br.readLine());
 
@@ -28,30 +31,25 @@ public class _014_2559_수열 {
 			arr.add(Integer.parseInt(st.nextToken()));
 
 		}
-
-		int w = (N - K) + 1;
-		
+        
+       
 		int hap = 0;
-		
-		int suhap= -9999;
-		
+
+		int suhap = Integer.MIN_VALUE;
+
 		int g = 0;
 
-		for (int i = 0; i < w; i++) {
+		for (int i = 0; i < N - K + 1; i++) {
 
 			for (int j = g; j < g + K; j++) {
 
 				hap = hap + arr.get(j);
 			}
-			
-				
-			if (hap > suhap) {
-				suhap = hap;	
-			}
-			
+
+			suhap = hap > suhap ? hap : suhap;
+
 			hap = 0;
 			g = g + 1;
-			
 
 		}
 		System.out.println(suhap);

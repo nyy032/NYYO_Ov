@@ -9,7 +9,7 @@ public class _009_4344_평균은넘겠지 {
 
 		Scanner scan = new Scanner(System.in);
 
-		double hap = 0;
+		double hap = 0; //학생들 점수의 합
 
 		double cnt = 0;
 

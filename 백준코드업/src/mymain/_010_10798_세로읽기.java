@@ -14,18 +14,23 @@ public class _010_10798_세로읽기 {
 
         ArrayList<ArrayList<Character>> arr = new ArrayList<>();
 
-        char[] c;
 
         for (int i = 0; i < 5; i++) {
             arr.add(new ArrayList<>());
         }
 
+        char[] c;
         int max = 0;
         for (int i = 0; i < 5; i++) {
+        	
             c = br.readLine().toCharArray();
+            
             max = Math.max(max, c.length);
+            
             for (int j = 0; j < c.length; j++) {
+            	
                 arr.get(i).add(c[j]);
+                
             }
 
         }
